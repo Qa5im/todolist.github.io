@@ -1,0 +1,118 @@
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+button
+{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    appearance: none;
+    background:none;
+}
+/* heading starts here */
+#heading_div
+{
+    background-color:aliceblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 5%;
+    padding: 0%;
+}
+
+#main_heading
+{
+    margin: 2%;
+    color: grey;
+}
+/* heading ends here */
+
+
+
+
+/* to do list input */
+#main_div
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#todo_input_div
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#todo_list_input_field
+{
+ 
+  border-width: 3px;
+  width: 50vw;
+  height: 32px;
+  padding-right: 2%; 
+}
+#input_but
+{
+    color: black;
+    background-color:gray;
+    width: auto;
+    font-weight: bold;
+    margin-left :10px; 
+    border-radius: 4px;
+}
+
+
+
+
+
+
+/*  item list start here */
+#item_list
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.item
+{
+    display: flex;
+    flex-direction: row;
+    background-color: darkgrey;
+    height: 50px;
+    justify-content: space-between;
+    border-radius: 3rem;
+}
+.text
+{
+    color: white;
+    outline: none;
+    border: none;
+    appearance: none;
+    background:none;
+}
+.text_field
+{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons 
+{
+    display: flex;
+    margin: 10px;
+} 
+
+
+/*  item list ends here */
+
+
+
+
