@@ -3,10 +3,8 @@
 function add_item() 
 {
     const item_list_el = document.getElementById("item_list")
-    let input_text_el = document.getElementById("todo_list_input_field")
-    input_text=input_text_el.value
-    
-    console.log(input_text)
+    const input_text_el = document.getElementById("todo_list_input_field_txt")
+    input_text = input_text_el.value
 
     if (!input_text)
     {
@@ -36,16 +34,18 @@ function add_item()
     buttons_el.classList.add("buttons")
     
     const edit_button_el= document.createElement("button")
-    edit_button_el.innerHTML= "Edit"
+    edit_button_el.innerHTML= "EDIT"
+    edit_button_el.classList.add("edit")
 
     const delete_button_el= document.createElement("button")
-    delete_button_el.innerHTML="Delete"
+    delete_button_el.innerHTML="DELETE"
+    delete_button_el.classList.add("delete")
 
     buttons_el.appendChild(edit_button_el)
     buttons_el.appendChild(delete_button_el)
 
 
-    item_el.appendChild(text_field_el);
+    item_el.appendChild(text_el);
     item_el.appendChild(buttons_el)
 
     item_list_el.appendChild(item_el);
@@ -75,7 +75,15 @@ function add_item()
 
 
 }
+const action2= document.getElementById("todo_list_input_field_txt")
+action2.addEventListener("keypress", (e)=>
+{
+    if(e.key === "Enter")
+    {
+        document.getElementById("input_but").click();
+    }
+})
 
 const action= document.getElementById("input_but")
 action.addEventListener("click",add_item)
-  
+

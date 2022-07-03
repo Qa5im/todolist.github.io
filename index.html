@@ -6,33 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2723f43300.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="icon" href="Untitled design (2).png" >
+    <title>Todo-list</title>
 </head>
 <body>
     <div id="heading_div">
-        <h1 id ="main_heading">Todo- list</h1>
+        <h1 id ="main_heading">Todo-list</h1>
     </div>
 
     <div id="main_div">
         
         <div id="todo_input_div">
-            <input type="text" placeholder=" e.g. enter task" id="todo_list_input_field">
+            <div id="todo_list_input_field" >
+                <i class="fa-solid fa-align-left"></i>
+                <input type="text" placeholder="Add an item" id="todo_list_input_field_txt">
+            </div>
+            
             <button id="input_but">Add item </button>
         </div>
 
-        <h2>Tasks</h2>
+        <div><h2 >Tasks</h2></div>
         <div id="item_list">
             <!-- <div class="item">
                 <div class="text_field">
-                 <input type="text" class="text" placeholder="enter task">
+                 <input type="text" class="text">
                 </div>
                 <div class="buttons">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
                 </div>
             </div> -->
         </div>
     </div>
+
     <script src="node.js"></script>
 </body>
 </html>

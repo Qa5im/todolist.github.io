@@ -1,12 +1,19 @@
 
 body
 {
-    background-color: beige;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-image: linear-gradient(to bottom right,  #374151 80%, #1F2937 20%);
+
+    /* background-image: linear-gradient(blue, pink); */
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+    
 
 
 button
@@ -17,13 +24,15 @@ button
     appearance: none;
     background:none;
 }
+button:hover
+{
+    opacity: 0.8;
+}
+
 /* heading starts here */
 #heading_div
 {
-    background-color:antiquewhite;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    white-space: nowrap;
     margin: 5% 5%;
     margin-bottom: 5%;
     padding: 0%;
@@ -31,7 +40,8 @@ button
 
 #main_heading
 {
-    margin: 2%;
+    font-size: 60px;
+    margin: 0;
     color: black;
     font-weight: bold;
 }
@@ -40,13 +50,13 @@ button
 
 
 
-/* to do list input */
+/* to do list input satrts here */
 #main_div
 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 #todo_input_div
 {
@@ -56,21 +66,43 @@ button
 
 #todo_list_input_field
 {
- 
-  border-width: 3px;
-  width: 50vw;
-  height: 32px;
-  padding-right: 2%; 
+  border-radius: 15px;
+  width: 40vw;
+  height: 50px;
+  padding: 0% 2% 0% 2%; 
+  background-color: #1F2937;
+  display: flex;
+  align-items: center;
 }
+
+
+#todo_list_input_field input
+{
+    outline: none;
+    border: none;
+    background:none;
+    color: #EEE;
+    flex: 1 1 0%;
+}
+
+
+#todo_list_input_field i
+{
+    margin-right: 1%;
+    color: #6B7280;
+}
+
 #input_but
 {
-    color: black;
-    background-color: antiquewhite;
-    width: auto;
+    margin-left :13px; 
+    white-space: nowrap;
+    padding: 0;
+    font-size: 15px;
+    color: rgb(252, 36, 72);
     font-weight: bold;
-    margin-left :10px; 
-    border-radius: 7px;
 }
+/* to do list input ends here */
+
 
 
 
@@ -88,35 +120,104 @@ button
 {
     display: flex;
     flex-direction: row;
-    background-color: darkgrey;
-    height: 50px;
+    align-items: center;
     justify-content: space-between;
-    border-radius: 3rem;
+    background-color:  #111827;
+    height: 50px;
+    border-radius: 15px;
+    width: 46vw;
+    padding: 0% 2% 0% 2%; 
+}
+.text_field
+{
+    flex: 1 1 0%;
 }
 .text
 {
-    color: white;
+    color: #EEE;
     outline: none;
     border: none;
     appearance: none;
     background:none;
+    width: 100%;
+    
 }
-.text_field
+.text:not(:read-only)
 {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: grey;
 }
+
 .buttons 
 {
     display: flex;
-    margin: 10px;
 } 
+.buttons button
+{
+    font-size: 15;
+}
+.edit
+{
+    font-weight: 700;
+    color: green
+}
+.delete
+{
+    color: red
+}
 
 
 /*  item list ends here */
 
 
 
+/* media queries */
+@media (max-width:540px) {
+    #todo_list_input_field i
+    {
+        display: none;
+    }
+    #input_but
+    {
+        margin-left :10px; 
+        font-size: 14px;
+        color: rgb(252, 36, 72);
+    }
 
+    .item
+    {
+        width: 86vw;
+    }
+
+    #todo_list_input_field i
+    {
+        margin-right: 2.5%;
+        color: #6B7280;
+    }
+    body
+    {
+        background-image: linear-gradient(to bottom right,  #374151 85%, #1F2937 15%);
+    }
+    #heading_div
+    {
+        white-space: nowrap;
+        margin: 5% 5%;
+        margin-top: 15%;
+        margin-bottom: 7%;
+        padding: 0%;
+    }
+
+
+    #main_heading
+    {
+        font-size: 40px;
+    }
+
+    #todo_list_input_field
+    {
+        margin: 0;
+        border-radius: 15px;
+        width: 70vw;
+    }
+
+    
+}
